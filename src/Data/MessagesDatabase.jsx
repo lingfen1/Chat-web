@@ -45,7 +45,6 @@ const MessagesDatabase = () => {
   ])
   return (
     <Context.Provider value={{ messages, setMessages }}>
-      
       <div>
         <Messages />
         <Input />
