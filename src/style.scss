@@ -1,0 +1,274 @@
+.home {
+  
+  .tilesDatabase {
+    
+    .container {
+      border: 1px solid white;
+      border-radius: 10px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      overflow: hidden;
+      .sidebar {
+        flex: 1;
+        border-right: 1px solid gray;
+        .logo {
+          display: flex;
+          align-items: center;
+          height: 50px;
+          padding: 10px;
+          border-bottom: 1px solid gray;
+
+          img {
+            height: 24px;
+            width: 24px;
+            border-width: 50%;
+            object-fit: cover;
+          }
+          span {
+            font-weight: bold;
+          }
+        }
+        .toolbar {
+          .tool {
+            display: flex;
+            align-items: center;
+            height: 50px;
+            padding: 10px;
+            border-bottom: 1px solid gray;
+            img {
+              height: 24px;
+              width: 24px;
+              border-width: 50%;
+              object-fit: cover;
+            }
+            span {
+              font-weight: bold;
+            }
+          }
+        }
+        .personInfo {
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          color: black;
+          cursor: pointer;
+
+          img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+          .userInfo {
+            span {
+              font-size: 18px;
+              font-weight: 500;
+            }
+            p {
+              font-style: 14px;
+              color: lightgray;
+            }
+          }
+        }
+      }
+      .messagebar {
+        flex: 2;
+        border-right: 1px solid gray;
+        .search {
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 10px;
+          color: rgb(33, 86, 233);
+          font-size: 30px;
+          font-weight: 500;
+          border-bottom: 1px solid gray;
+          .searchIcons {
+            display: flex;
+            gap: 10px;
+
+            img {
+              height: 24px;
+              cursor: pointer;
+            }
+          }
+        }
+        .chatsbar {
+          .message {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: black;
+            cursor: pointer;
+
+            &:hover {
+              background-color: lightblue;
+            }
+            img {
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+            .messageInfo {
+              span {
+                font-size: 18px;
+                font-weight: 500;
+              }
+              p {
+                font-style: 14px;
+                color: rgb(148, 141, 141);
+              }
+            }
+          }
+          .pinned {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            img {
+              height: 24px;
+              cursor: pointer;
+            }
+          }
+          .all {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+
+            gap: 10px;
+            img {
+              height: 24px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      .chat {
+        flex: 3;
+        .userbar {
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 10px;
+          border-bottom: 1px solid gray;
+          .userInfo {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: black;
+            cursor: pointer;
+
+            img {
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+            .userText {
+              span {
+                font-size: 18px;
+                font-weight: 500;
+              }
+              p {
+                font-style: 14px;
+                color: rgb(148, 141, 141);
+              }
+            }
+          }
+          .userAbility {
+            img {
+              height: 24px;
+              cursor: pointer;
+            }
+          }
+        }
+        .messages {
+          padding: 10px;
+          height: 550px; /* 设置固定的高度 */
+          overflow: scroll;
+          .talking {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            .talkingInfo {
+              display: flex;
+              flex-direction: column;
+              color: gray;
+              font-weight: 300;
+              img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                object-fit: cover;
+              }
+            }
+            .talkingContent {
+              max-width: 80%;
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              p {
+                background-color: lightblue;
+                padding: 10px 20px;
+                border-radius: 0px 10px 10px 10px;
+                max-width: max-content;
+              }
+              img {
+                width: 20%;
+                height: 80%;
+              }
+            }
+            &.owner {
+              flex-direction: row-reverse;
+              .talkingContent {
+                align-items: flex-end;
+                p {
+                  background-color: gray;
+                  color: white;
+                  border-radius: 10px 0px 10px 10px;
+                }
+              }
+            }
+          }
+        }
+        .input {
+          height: 50px;
+          background-color: white;
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          input {
+            width: 100%;
+            border: none;
+            outline: none;
+            color: #2f2d52;
+            font-size: 18px;
+            &::placeholder {
+              color: lightgray;
+            }
+          }
+          .send {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            button {
+              border: none;
+              padding: 10px 15px;
+              color: white;
+              background-color: #8da4f1;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
